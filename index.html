@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Гонецъ — Сервисы для маркетплейсов</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Arial, sans-serif; background: #0f1117; color: #e0e0e0; }
+
+    header {
+      background: linear-gradient(135deg, #1a1d2e 0%, #16213e 100%);
+      border-bottom: 1px solid #2d3561;
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .logo { font-size: 28px; font-weight: 700; color: #ffffff; letter-spacing: 1px; }
+    .logo span { color: #4f8ef7; }
+    .tagline { font-size: 13px; color: #8892b0; margin-top: 4px; }
+
+    .hero {
+      text-align: center;
+      padding: 80px 20px 60px;
+      background: linear-gradient(180deg, #16213e 0%, #0f1117 100%);
+    }
+    .hero h1 { font-size: 42px; font-weight: 700; color: #ffffff; margin-bottom: 16px; }
+    .hero h1 span { color: #4f8ef7; }
+    .hero p { font-size: 18px; color: #8892b0; max-width: 600px; margin: 0 auto 40px; line-height: 1.7; }
+
+    .services {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 20px;
+    }
+    .services h2 { text-align: center; font-size: 28px; color: #ffffff; margin-bottom: 40px; }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 24px;
+    }
+    .card {
+      background: #1a1d2e;
+      border: 1px solid #2d3561;
+      border-radius: 12px;
+      padding: 28px 24px;
+      transition: transform 0.2s, border-color 0.2s;
+      cursor: pointer;
+    }
+    .card:hover { transform: translateY(-4px); border-color: #4f8ef7; }
+    .card-icon { font-size: 36px; margin-bottom: 12px; }
+    .card h3 { font-size: 20px; color: #ffffff; margin-bottom: 8px; }
+    .card p { font-size: 14px; color: #8892b0; line-height: 1.6; }
+    .card .badge {
+      display: inline-block;
+      margin-top: 16px;
+      padding: 4px 12px;
+      background: #4f8ef720;
+      color: #4f8ef7;
+      border-radius: 20px;
+      font-size: 12px;
+      border: 1px solid #4f8ef740;
+    }
+    .card.coming-soon { opacity: 0.5; cursor: default; }
+    .card.coming-soon:hover { transform: none; border-color: #2d3561; }
+    .card .badge.soon { background: #ffffff10; color: #8892b0; border-color: #ffffff20; }
+
+    .how {
+      background: #13162a;
+      padding: 60px 20px;
+      border-top: 1px solid #2d3561;
+      border-bottom: 1px solid #2d3561;
+    }
+    .how h2 { text-align: center; font-size: 28px; color: #ffffff; margin-bottom: 40px; }
+    .steps {
+      max-width: 700px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px;
+    }
+    .step { text-align: center; }
+    .step-num {
+      width: 48px; height: 48px;
+      background: #4f8ef7;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 12px;
+    }
+    .step h4 { font-size: 16px; color: #ffffff; margin-bottom: 6px; }
+    .step p { font-size: 13px; color: #8892b0; line-height: 1.5; }
+
+    footer {
+      background: #0a0d1a;
+      padding: 40px 40px;
+      border-top: 1px solid #2d3561;
+    }
+    .footer-grid {
+      max-width: 900px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+    }
+    footer h4 { font-size: 14px; color: #4f8ef7; margin-bottom: 16px; text-transform: uppercase; letter-spacing: 1px; }
+    footer p, footer li { font-size: 13px; color: #8892b0; line-height: 1.9; list-style: none; }
+    footer a { color: #8892b0; text-decoration: none; }
+    footer a:hover { color: #4f8ef7; }
+    .footer-bottom {
+      max-width: 900px;
+      margin: 24px auto 0;
+      padding-top: 20px;
+      border-top: 1px solid #2d3561;
+      font-size: 12px;
+      color: #4a5568;
+      text-align: center;
+    }
+    @media (max-width: 600px) {
+      .hero h1 { font-size: 28px; }
+      .footer-grid { grid-template-columns: 1fr; }
+      header { flex-direction: column; gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div>
+    <div class="logo">Гонец<span>ъ</span></div>
+    <div class="tagline">Профессиональные инструменты для маркетплейсов</div>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Аналитика и автоматизация<br><span>для маркетплейсов</span></h1>
+  <p>Готовые инструменты для работы с М.Видео, Озон, Яндекс.Маркет и другими площадками. Экономьте время — работайте эффективнее.</p>
+</section>
+
+<section class="services">
+  <h2>Доступные сервисы</h2>
+  <div class="cards">
+    <div class="card">
+      <div class="card-icon">📺</div>
+      <h3>М.Видео</h3>
+      <p>Парсинг товаров, юнит-экономика, расчёт комиссий, экспорт в Excel.</p>
+      <span class="badge">Доступен</span>
+    </div>
+    <div class="card coming-soon">
+      <div class="card-icon">🛒</div>
+      <h3>Озон</h3>
+      <p>Расчёт FBO/FBS, анализ конкурентов, управление карточками товаров.</p>
+      <span class="badge soon">Скоро</span>
+    </div>
+    <div class="card coming-soon">
+      <div class="card-icon">🟡</div>
+      <h3>Яндекс.Маркет</h3>
+      <p>Аналитика продаж, расчёт логистики, ценообразование.</p>
+      <span class="badge soon">Скоро</span>
+    </div>
+  </div>
+</section>
+
+<section class="how">
+  <h2>Как это работает</h2>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h4>Выберите сервис</h4>
+      <p>Выберите нужный маркетплейс из списка доступных инструментов</p>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h4>Оплатите доступ</h4>
+      <p>Разовая оплата за 1 месяц без автопродления и скрытых платежей</p>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h4>Работайте</h4>
+      <p>Получите доступ к инструменту сразу после подтверждения оплаты</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Контакты</h4>
+      <ul>
+        <li>По вопросам подключения и работы сервисов обращайтесь по электронной почте</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Юридическая информация</h4>
+      <ul>
+        <li><strong style="color:#c0c8e0;">ООО «Гонецъ»</strong></li>
+        <li>ИНН: 9704248886</li>
+        <li>ОГРН: 1247700574450</li>
+        <li>КПП: 770401001</li>
+        <li style="margin-top:8px; font-size:12px;">Оплата производится через защищённый сервис ЮКасса</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    © 2026 ООО «Гонецъ». Все права защищены.
+  </div>
+</footer>
+
+</body>
+</html>
